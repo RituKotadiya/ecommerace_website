@@ -4,13 +4,12 @@ import Home from './components/Home/Home';
 import header from './components/Header/header';
 import Signin from './components/Signin/Signin';
 import Signup from './components/Signup/Signup';
+import Header from './components/Header/header';
 
 function App() {
   return (
-  //  <Home/>
-    // <Header />
-    // <Signin />
-    <Signup />
+ 
+ <Home />
     
   );
 }

@@ -1,7 +1,7 @@
 .image-container {
   position: relative;
   display: inline-block;
- 
+
 }
 
 .overlay-text {
@@ -13,16 +13,38 @@
   font-weight: bold;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
+
 .overlay-card {
   position: absolute;
-  top: 50%;
-  left: 10%;
+  top: 55%;
+  left: 40%;
   color: white;
   font-size: 2.5rem;
   font-weight: bold;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-display: flex;
-justify-content: center;
-flex-direction: row;
-gap: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+
+}
+
+.overlay-txt {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.text{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 1.1rem;
+ 
 }

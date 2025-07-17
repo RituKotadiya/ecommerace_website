@@ -1,18 +1,21 @@
 import "./Home.scss"
 import image from './dark.jpg';
-import im from './simple.jpg';
+import collection from './collection.jpg';
 import perfume from './perfume.webp';
-
+import model from './model.webp';
+import Makeup from './Makeup.jpg';
+import tabel from './tabel.webp';
+import bag from './bag.jpg';
 
 
 function Home() {
 
       const products = [
-            { id: 1, image: im, name: "Product 1", description: "Description for product 1" },
-            { id: 2, image: perfume, name: "Product 2", description: "Description for product 2" },
-            { id: 3, image: im, name: "Product 3", description: "Description for product 3" },
-            { id: 4, image: im, name: "Product 4", description: "Description for product 4" },
-            { id: 5, image: im, name: "Product 5", description: "Description for product 5" },
+            { id: 1, image: Makeup, name: "Makeup", description: "Description for product 1" },
+            { id: 2, image: perfume, name: "Perfume", description: "Description for product 2" },
+            { id: 3, image: model, name: "Model", description: "Description for product 3" },
+            { id: 4, image: tabel, name: "Tabel", description: "Description for product 4" },
+            { id: 5, image: bag, name: "Bag", description: "Description for product 5" },
       ];
 
       return (
@@ -21,7 +24,6 @@ function Home() {
                         <img src={image} alt="bag-ground" style={{ width: "100%" }} />
                         <h1 className="overlay-text">Your One Stop <br />Shop for Exerything</h1>
                         <p className="overlay-txt">Find everything you need in one place - great deals, top quality, and endless convenience. Shop anytime, anywhere. Instant deals!</p>
-
 
                         <div className="overlay-card" style={{ width: "18rem" }}>
                               {
@@ -37,11 +39,15 @@ function Home() {
                               }
                         </div>
 
-                        <div className="text">
+                        <div className="text" >
                               <h1>New in</h1>
                               <p>Bringing you the Newest Trends, Latest Styles, and Must-Have Collections -- Just Dropped!</p>
                         </div>
 
+                  </div>
+
+                  <div className="container-fluid image-container" >
+                        <img src={collection} alt="bag-ground" style={{ width: "100%", height: "400px" }} />
                   </div>
 
             </div>

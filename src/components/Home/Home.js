@@ -6,6 +6,13 @@ import model from './model.webp';
 import Makeup from './Makeup.jpg';
 import tabel from './tabel.webp';
 import bag from './bag.jpg';
+import collection_new from './collection_new.jpg';
+import perfumePhoto from './perfume-photo.jpg';
+import myntra from './myntra.jpg';
+
+import hand_bag from './hand_bag.webp';
+
+
 
 
 function Home() {
@@ -16,6 +23,10 @@ function Home() {
             { id: 3, image: model, name: "Model", description: "Description for product 3" },
             { id: 4, image: tabel, name: "Tabel", description: "Description for product 4" },
             { id: 5, image: bag, name: "Bag", description: "Description for product 5" },
+      ];
+
+      const product = [
+            { id: 1, image: Makeup, name: "Makeup", description: "Description for product 1" },
       ];
 
       return (
@@ -40,8 +51,8 @@ function Home() {
                         </div>
 
                         <div className="text" >
-                              <h1>New in</h1>
-                              <p>Bringing you the Newest Trends, Latest Styles, and Must-Have Collections -- Just Dropped!</p>
+                              <h1><b>New in</b></h1>
+                              <span>Bringing you the Newest Trends, Latest Styles, and Must-Have</span>  <span>Collections -- Just Dropped!</span>
                         </div>
 
                   </div>
@@ -50,7 +61,44 @@ function Home() {
                         <img src={collection} alt="bag-ground" style={{ width: "100%", height: "400px" }} />
                   </div>
 
+                  <div className="product">
+                        <div class="card" style={{ width: "18rem" }}>
+                              <img src={collection_new} class="card-img-top" alt="..." style={{ height: '300px' }} />
+                              <div class="card-body" >
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                              </div>
+                        </div>
+                        <div class="card" style={{ width: "18rem" }}>
+                              <img src={myntra} class="card-img-top" alt="..." style={{ height: '300px' }} />
+                              <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                              </div>
+                        </div>
+                        <div class="card" style={{ width: "18rem" }}>
+                              <img src={perfumePhoto} class="card-img-top" alt="..." style={{ height: '300px' }} />
+
+                              <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                              </div>
+                        </div>
+                        <div class="card" style={{ width: "18rem" }}>
+                              <img src={hand_bag} class="card-img-top" alt="..." style={{ height: '300px' }} />
+                              <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                              </div>
+                        </div>
+                  </div>
+
             </div>
+
 
       )
 }

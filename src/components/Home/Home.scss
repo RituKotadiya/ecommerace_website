@@ -43,7 +43,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  // text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   font-weight: bold;
   font-size: 1.1rem;
   margin-top: 50px;
@@ -70,20 +70,13 @@
   text-align: center;
   backdrop-filter: blur(8px);
   transition: transform 0.3s;
+
 }
 
-// .card img {
-//   width: 100%;
-//   border-radius: 50%;
-//   height: 120px;
-//   object-fit: cover;
-// }
-
-// .card:hover {
-//   transform: scale(1.05);
-// }
-
-// .card p {
-//   font-size: 0.85rem;
-//   margin-top: 0.5rem;
-// }
+.product{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}

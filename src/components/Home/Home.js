@@ -9,9 +9,8 @@ import bag from './bag.jpg';
 import collection_new from './collection_new.jpg';
 import perfumePhoto from './perfume-photo.jpg';
 import myntra from './myntra.jpg';
-
 import hand_bag from './hand_bag.webp';
-
+import arevlop from './arevlop.webp';
 
 
 
@@ -96,7 +95,25 @@ function Home() {
                               </div>
                         </div>
                   </div>
+                  <div className="card-product">
+                        <div class="card mb-3" style={{ maxwidth: "540px", width: "600px" }} >
+                              <div class="row g-0">
+                                    <div class="col-md-4">
 
+                                          <img src={arevlop} className="card-img-top" alt="Card image" style={{ borderRadius: "120px 120px 0 0", height: "250px", width: "200px" }} />
+
+                                    </div>
+                                    <div class="col-md-8">
+                                          <div class="card-body">
+                                                <h2 className="card-body-title">Shop Smart.</h2>
+                                                <h2 className="card-body-title">Shop Fast.</h2>
+                                                <h2 className="card-body-title">Shop Everything!</h2>
+
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
             </div>
 
 

@@ -38,7 +38,8 @@
   font-weight: bold;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
-.text{
+
+.text {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -48,9 +49,9 @@
   font-size: 1.1rem;
   margin-top: 50px;
   margin-bottom: 50px;
-  
-  
- 
+
+
+
 }
 
 
@@ -73,10 +74,24 @@
 
 }
 
-.product{
+.product {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
+}
+
+.card-product {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+}
+
+.card-body-title {
+  display: flex;
+  justify-content: start;
+  margin-left: 40px;
+   font-family: 'Poppins', sans-serif;
 }

@@ -11,6 +11,19 @@ import perfumePhoto from './perfume-photo.jpg';
 import myntra from './myntra.jpg';
 import hand_bag from './hand_bag.webp';
 import arevlop from './arevlop.webp';
+import phone from './phone.jpg';
+import sofa from './sofa.jpg';
+import fashion from './fashion.jpg';
+import center from './center.jpg';
+import Women from './Women.jpg';
+import beauty from './beauty.webp';
+import womaa from './womaa.jpg';
+
+
+
+
+
+
 
 
 
@@ -114,6 +127,89 @@ function Home() {
                               </div>
                         </div>
                   </div>
+                  <div className="product" style={{ gap: "50px" }}>
+                        <div class="card" style={{ width: "18rem" }}>
+                              <img src={phone} class="card-img-top" alt="..." style={{ height: '300px' }} />
+                              <div class="card-body" >
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                              </div>
+                        </div>
+                        <div class="card" style={{ width: "18rem" }}>
+                              <img src={sofa} class="card-img-top" alt="..." style={{ height: '300px' }} />
+                              <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                              </div>
+                        </div>
+                        <div class="card" style={{ width: "18rem" }}>
+                              <img src={fashion} class="card-img-top" alt="..." style={{ height: '300px' }} />
+
+                              <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                              </div>
+                        </div>
+
+                  </div>
+                  <div className="card-product">
+                        <div class="card mb-3" style={{ maxwidth: "540px", width: "600px" }} >
+                              <div class="row g-0">
+                                    <div class="col-md-4">
+
+                                          <img src={center} className="card-img-top" alt="Card image" style={{ borderRadius: "120px 120px 0 0", height: "250px", width: "200px" }} />
+
+                                    </div>
+                                    <div class="col-md-8">
+                                          <div class="card-body">
+                                                <h2 className="card-body-title">Shop Smart.</h2>
+                                                <h2 className="card-body-title">Shop Fast.</h2>
+                                                <h2 className="card-body-title">Shop Everything!</h2>
+
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                   <div className="product">
+                        <div class="card" style={{ width: "18rem" }}>
+                              <img src={center} class="card-img-top" alt="..." style={{ height: '300px' }} />
+                              <div class="card-body" >
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                              </div>
+                        </div>
+                        <div class="card" style={{ width: "18rem" }}>
+                              <img src={Women} class="card-img-top" alt="..." style={{ height: '300px' }} />
+                              <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                              </div>
+                        </div>
+                        <div class="card" style={{ width: "18rem" }}>
+                              <img src={beauty} class="card-img-top" alt="..." style={{ height: '300px' }} />
+
+                              <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                              </div>
+                        </div>
+                        <div class="card" style={{ width: "18rem" }}>
+                              <img src={womaa} class="card-img-top" alt="..." style={{ height: '300px' }} />
+                              <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                              </div>
+                        </div>
+                  </div>
+
             </div>
 
 

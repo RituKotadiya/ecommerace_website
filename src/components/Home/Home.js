@@ -18,6 +18,9 @@ import center from './center.jpg';
 import Women from './Women.jpg';
 import beauty from './beauty.webp';
 import womaa from './womaa.jpg';
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
+
 
 
 
@@ -43,6 +46,8 @@ function Home() {
 
       return (
             <div>
+                  <Header />
+
                   <div className="container-fluid image-container">
                         <img src={image} alt="bag-ground" style={{ width: "100%" }} />
                         <h1 className="overlay-text">Your One Stop <br />Shop for Exerything</h1>
@@ -174,7 +179,7 @@ function Home() {
                               </div>
                         </div>
                   </div>
-                   <div className="product">
+                  <div className="product">
                         <div class="card" style={{ width: "18rem" }}>
                               <img src={center} class="card-img-top" alt="..." style={{ height: '300px' }} />
                               <div class="card-body" >
@@ -209,7 +214,10 @@ function Home() {
                               </div>
                         </div>
                   </div>
-
+                  <div className="blog">
+                        <h2>Blog</h2>
+                  </div>
+                  <Footer />
             </div>
 
 

@@ -2,7 +2,7 @@ import "./header.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBox, faCalendarDays, faHouse, faRightToBracket, faSearch, faUser, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 
-function header() {
+function Header() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
@@ -87,4 +87,4 @@ function header() {
 
     )
 }
-export default header;
+export default Header;

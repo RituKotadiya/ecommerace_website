@@ -28,25 +28,25 @@ function Header() {
                     <ul className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                         <li className="text-center">
                             <a href="#" className="nav-link text-secondary">
-                                <FontAwesomeIcon icon={faHouse} size="lg" className="mb-1" />
+                                {/* <FontAwesomeIcon icon={faHouse} size="lg" className="mb-1" /> */}
                                 <div>Home</div>
                             </a>
                         </li>
                         <li className="text-center">
                             <a href="#" className="nav-link text-secondary">
-                                <FontAwesomeIcon icon={faCalendarDays} size="lg" className="mb-1" />
+                                {/* <FontAwesomeIcon icon={faCalendarDays} size="lg" className="mb-1" /> */}
                                 <div>Orders</div>
                             </a>
                         </li>
                         <li className="text-center">
                             <a href="#" className="nav-link text-secondary">
-                                <FontAwesomeIcon icon={faBox} size="lg" className="mb-1" />
+                                {/* <FontAwesomeIcon icon={faBox} size="lg" className="mb-1" /> */}
                                 <div>Products</div>
                             </a>
                         </li>
                         <li className="text-center">
                             <a href="#" className="nav-link text-secondary">
-                                <FontAwesomeIcon icon={faUser} size="lg" className="mb-1" />
+                                {/* <FontAwesomeIcon icon={faUser} size="lg" className="mb-1" /> */}
                                 <div>Customers</div>
                             </a>
                         </li>
@@ -55,7 +55,7 @@ function Header() {
                     {/* Search & Auth Icons */}
                     <div className="ms-auto d-flex align-items-center mt-md-0">
                         {/* Search bar */}
-                        <div className="input-group me-3" style={{ maxWidth: '300px' }}>
+                        {/* <div className="input-group me-3" style={{ maxWidth: '300px' }}>
                             <span className="input-group-text" id="addon-wrapping">
                                 <FontAwesomeIcon icon={faSearch} />
                             </span>
@@ -66,17 +66,21 @@ function Header() {
                                 aria-label="Search"
                                 aria-describedby="addon-wrapping"
                             />
-                        </div>
+                        </div> */}
 
                         {/* Sign-in icon */}
-                        <a href="#" className="text-primary me-3" title="Login">
+                        {/* <a href="#" className="text-primary me-3" title="Login">
                             <FontAwesomeIcon icon={faRightToBracket} size="lg" />
-                        </a>
+                        </a> */}
+
 
                         {/* Sign-up icon */}
-                        <a href="#" className="text-primary" title="Sign Up">
+                        {/* <a href="#" className="text-primary" title="Sign Up">
                             <FontAwesomeIcon icon={faUserPlus} size="lg" />
-                        </a>
+                        </a> */}
+
+                        <button className="btn"> Signin</button>
+                        <button className="btn">Signup</button>
                     </div>
                 </div>
             </div>

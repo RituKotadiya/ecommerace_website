@@ -1,7 +1,6 @@
 .image-container {
   position: relative;
-  display: inline-block;
-
+  // display: inline-block;
 }
 
 .overlay-text {
@@ -92,7 +91,7 @@
 .card-body-title {
   display: flex;
   justify-content: start;
-  margin-left: 40px;
+  margin-left: 80px;
   font-family: 'Poppins', sans-serif;
 }
 

@@ -96,7 +96,9 @@ function Home() {
                               <img src={collection_new} class="card-img-top" alt="..." style={{ height: '300px' }} />
                               <div class="card-body" >
                                     <h5 class="card-title">Soft Jacket</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p class="card-text">
+                                          FLEXIMAA Women's Cotton Full Zipper Sweatshirt Hoodies with Kangaroo Pocket</p>
+                                    <h4>₹ 699</h4>
                                     <a href="#" class="btn btn-primary">ADD TO CARD</a>
                               </div>
                         </div>
@@ -104,7 +106,9 @@ function Home() {
                               <img src={myntra} class="card-img-top" alt="..." style={{ height: '300px' }} />
                               <div class="card-body">
                                     <h5 class="card-title">Shoes</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p class="card-text">Vendoz Women and Girls Latest Collection Stylish White Casual Shoes Sneakers</p>
+                                    <h4>₹ 1,189</h4>
+
                                     <a href="#" class="btn btn-primary">ADD TO CARD</a>
                               </div>
                         </div>
@@ -113,7 +117,8 @@ function Home() {
 
                               <div class="card-body">
                                     <h5 class="card-title">Golden Serum</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p class="card-text">Studd Muffyn | 24K Gold Face Serum | Hydrationg and moisturizing </p>
+                                    <h4> ₹ 919</h4>
                                     <a href="#" class="btn btn-primary">ADD TO CARD</a>
                               </div>
                         </div>
@@ -121,7 +126,9 @@ function Home() {
                               <img src={hand_bag} class="card-img-top" alt="..." style={{ height: '300px' }} />
                               <div class="card-body">
                                     <h5 class="card-title">Luxury Handbag</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p class="card-text">Luxury Handbag for Women | Ladies purse | Stylish Shoulder Bag</p>
+                                    <h4> ₹ 4,249</h4>
+
                                     <a href="#" class="btn btn-primary">ADD TO CARD</a>
                               </div>
                         </div>
@@ -141,6 +148,8 @@ function Home() {
                                                 <h2 className="card-body-title">Shop Everything!</h2>
 
                                           </div>
+                                          <a href="#" class="btn btn-primary">Shop Now</a>
+
                                     </div>
                               </div>
                         </div>
@@ -150,7 +159,9 @@ function Home() {
                               <img src={phone} class="card-img-top" alt="..." style={{ height: '300px' }} />
                               <div class="card-body" >
                                     <h5 class="card-title">Smartphone</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p class="card-text">Apple iPhone 15 (256 GB) - Black | Round dial Smartwatch with BT Calling, 1.39" Display, IP68, (Jet Black)</p>
+                                    <h4> ₹ 75,800</h4>
+
                                     <a href="#" class="btn btn-primary">ADD TO CARD</a>
                               </div>
                         </div>
@@ -158,7 +169,9 @@ function Home() {
                               <img src={sofa} class="card-img-top" alt="..." style={{ height: '300px' }} />
                               <div class="card-body">
                                     <h5 class="card-title">Luxury Chair</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p class="card-text"> Modern Comfy Velvet Upholstered Barrel Chairs, Luxury Single Sofa Armchair for Living Room, and | Office</p>
+                                    <h4> ₹ 15,499</h4>
+
                                     <a href="#" class="btn btn-primary">ADD TO CARD</a>
                               </div>
                         </div>
@@ -167,7 +180,9 @@ function Home() {
 
                               <div class="card-body">
                                     <h5 class="card-title">Urban Fashion</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p class="card-text">URBAN MONKEY UMSB Lightweight Coach Jacket – Navy Blue, Quick‑Dry Polyester, Unisex Streetwear</p>
+                                    <h4> ₹ 3,399</h4>
+
                                     <a href="#" class="btn btn-primary">ADD TO CARD</a>
                               </div>
                         </div>
@@ -178,7 +193,7 @@ function Home() {
                               <div class="row g-0">
                                     <div class="col-md-4">
 
-                                          <img src={center} className="card-img-top" alt="Card image" style={{  height: "300px", width: "260px" }} />
+                                          <img src={center} className="card-img-top" alt="Card image" style={{ height: "300px", width: "260px" }} />
 
                                     </div>
                                     <div class="col-md-8">
@@ -188,6 +203,8 @@ function Home() {
                                                 <h2 className="card-body-title">Shop Everything!</h2>
 
                                           </div>
+                                          <a href="#" class="btn btn-primary">Shop Now</a>
+
                                     </div>
                               </div>
                         </div>
@@ -205,7 +222,9 @@ function Home() {
                               <img src={Women} class="card-img-top" alt="..." style={{ height: '300px' }} />
                               <div class="card-body">
                                     <h5 class="card-title">Fashion Dress</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p class="card-text">Alvami Women's Printed Kurta Set offers a stylish kurta, pant, and dupatta for a complete ethnic look.</p>
+                                    <h4> ₹ 11,99</h4>
+
                                     <a href="#" class="btn btn-primary">ADD TO CARD</a>
                               </div>
                         </div>
@@ -213,16 +232,20 @@ function Home() {
                               <img src={beauty} class="card-img-top" alt="..." style={{ height: '300px' }} />
 
                               <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <h5 class="card-title">Cold Processed Stem Cell Serum</h5>
+                                    <p class="card-text">COSMEDIX Cell ID is a cruelty-free serum that Smooths skin and reduces pores.</p>
+                                    <h4> ₹ 17,107</h4>
+
                                     <a href="#" class="btn btn-primary">ADD TO CARD</a>
                               </div>
                         </div>
                         <div class="card" style={{ width: "18rem" }}>
                               <img src={womaa} class="card-img-top" alt="..." style={{ height: '300px' }} />
                               <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <h5 class="card-title">Jacket Shirt</h5>
+                                    <p class="card-text"> CHKOKKO Tweed Women Winter Shacket Stylish Standard Length Coat Plaid Jacket Shirt  </p>
+                                    <h4> ₹ 999</h4>
+
                                     <a href="#" class="btn btn-primary">ADD TO CARD</a>
                               </div>
                         </div>

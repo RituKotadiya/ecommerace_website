@@ -1,11 +1,13 @@
 import "./header.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBox, faCalendarDays, faHouse, faRightToBracket, faSearch, faUser, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { faBox, faCalendarDays, faHouse, faRightToBracket, faSearch, faUser, faUserPlus, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import RK from './RK.png';
+
 
 
 function Header() {
     return (
+        <div className="na">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
                 {/* Brand */}
@@ -21,13 +23,13 @@ function Header() {
                     aria-controls="navbarSupportedContent"
                     aria-expanded="false"
                     aria-label="Toggle navigation"
-                    
+
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
                 {/* Navbar content */}
-                <div className="collapse navbar-collapse" id="navbarSupportedContent"  style={{fontSize: "22px"}}>
+                <div className="collapse navbar-collapse" id="navbarSupportedContent" style={{ fontSize: "22px" }}>
                     {/* Nav links */}
                     <ul className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                         <li className="text-center">
@@ -83,14 +85,20 @@ function Header() {
                             <FontAwesomeIcon icon={faUserPlus} size="lg" />
                         </a> */}
 
-                        <button className="btn"  style={{fontSize: "22px"}}> Signin</button>
-                        <button className="btn"  style={{fontSize: "22px"}}>Signup</button>
+                        <button className="btn" style={{ fontSize: "22px" }}> Signin</button>
+                        <button className="btn" style={{ fontSize: "22px" }}>Signup</button>
+
+                        <a href="#" className="ms-3" title="Cart">
+                            <FontAwesomeIcon icon={faCartShopping} style={{ fontSize: "28px", color: "black" }} />
+                        </a>
+
                     </div>
                 </div>
+              
             </div>
 
         </nav>
-
+</div>
 
 
     )

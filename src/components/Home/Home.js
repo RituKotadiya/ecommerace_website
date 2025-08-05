@@ -1,6 +1,6 @@
 import "./Home.scss"
-import image from './dark.jpg';
-import collection from './collection.jpg';
+import image from './sale.jpg';
+import collection from './marketing.jpg';
 import perfume from './perfume.webp';
 import model from './model.webp';
 import Makeup from './Makeup.jpg';
@@ -10,7 +10,7 @@ import collection_new from './collection_new.jpg';
 import perfumePhoto from './perfume-photo.jpg';
 import myntra from './myntra.jpg';
 import hand_bag from './hand_bag.webp';
-import arevlop from './arevlop.webp';
+import bigstock from './bigstock.jpg';
 import phone from './phone.jpg';
 import sofa from './sofa.jpg';
 import fashion from './fashion.jpg';
@@ -20,6 +20,8 @@ import beauty from './beauty.webp';
 import womaa from './womaa.jpg';
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
+import clock from './clock.jpg';
+
 
 
 
@@ -33,13 +35,32 @@ function Home() {
             { id: 5, image: bag, name: "Bags", description: "Description for product 5" },
       ];
 
-      // const products1 = [
-      //       { id: 1, image: collection_new, name: "collection_new", description: "Description for product 1" },
-      //       { id: 2, image: myntra, name: "myntra", description: "Description for product 2" },
-      //       { id: 3, image: perfumePhoto, name: "perfumePhoto", description: "Description for product 3" },
-      //       { id: 4, image: hand_bag, name: "hand_bag", description: "Description for product 4" },
+      const products1 = [
+            { id: 1, image: collection_new, name: "Soft Jacket", description: "FLEXIMAA Women's Cotton Full Zipper Sweatshirt Hoodies with Kangaroo Pocket", price: "₹ 699" },
+            { id: 2, image: myntra, name: "Shoes", description: "Vendoz Women and Girls Latest Collection Stylish White Casual Shoes Sneakers", price: "₹ 1,189" },
+            { id: 3, image: perfumePhoto, name: "Golden Serum", description: "Studd Muffyn | 24K Gold Face Serum | Hydrationg and moisturizing", price: "₹ 919" },
+            { id: 4, image: hand_bag, name: "Luxury Handbag", description: "Luxury Handbag for Women | Ladies purse | Stylish Shoulder Bag |  A blend of fashion ", price: "₹ 4,249" },
 
-      // ];
+      ];
+
+      const products2 = [
+            { id: 1, image: phone, name: "Smartphone", description: "Apple iPhone 15 (256 GB) - Black | Round dial Smartwatch with BT Calling, 1.39 Display, IP68, (Jet Black)", price: "₹ 75,800" },
+            { id: 2, image: sofa, name: "Luxury Chair", description: " Modern Comfy Velvet Upholstered Barrel Chairs, Luxury Single Sofa Armchair for Living Room, and | Office", price: "₹ 11,99" },
+            { id: 3, image: fashion, name: "Urban Fashion", description: "URBAN MONKEY UMSB Lightweight Coach Jacket – Navy Blue, Quick‑Dry Polyester, Unisex Streetwear", price: "₹ 3,399" },
+
+      ];
+
+
+      const products3 = [
+            { id: 1, image: clock, name: "clock", description: "Titan Essence Classic Analog Wall Clock - White, Plastic, 30x30 Cm - stylish and functional.", price: " ₹ 995" },
+            { id: 2, image: Women, name: "Fashion Dress", description: "Alvami Women's Printed Kurta Set offers a stylish kurta, pant, and dupatta for a complete ethnic look.", price: "₹₹ 11,99" },
+            { id: 3, image: beauty, name: "Cold Processed Stem Cell Serum", description: "COSMEDIX Cell ID smooths skin and refines pores.", price: "₹ 17,107" },
+            { id: 4, image: womaa, name: "Jacket Shirt", description: " CHKOKKO Tweed Women Winter Shacket Stylish Standard Length Coat Plaid Jacket Shirt ", price: "₹ 999" },
+
+      ];
+
+
+
 
       return (
             <div>
@@ -72,26 +93,34 @@ function Home() {
                   </div>
 
                   <div className="container-fluid image-container" >
-                        <img src={collection} alt="bag-ground" style={{ width: "100%", height: "400px" }} />
+                        <img src={collection} alt="bag-ground" style={{ width: "100%", height: "600px" }} />
                   </div>
 
 
-                  {/* <div className="overlay-card" style={{ width: "18rem" }}>
+                  <div className="product">
                         {
                               products1.map((item) => {
                                     return (
-                                          <div style={{ textAlign: "center" }}>
-                                                <img src={item.image} className="card-img-top" alt="Card image" style={{ borderRadius: "120px 120px 0 0", height: "250px", width: "200px" }} />
-                                                <h5 style={{ margin: "0.5rem 0" }}>{item.name}</h5>
-                                                <p style={{ fontSize: "0.9rem", margin: 0 }}>{item.description}</p>
+                                          <div class="card" style={{ width: "18rem" }}>
+
+                                                <img src={item.image} className="card-img-top" alt={item.name} style={{ height: "300px" }} />
+                                                <h5 className="card-title" >{item.name}</h5>
+                                                <p class="card-text">{item.description}</p>
+                                                <h4>{item.price}</h4>
+                                                <a href="#" className="btn" style={{ backgroundColor: 'rgba(209, 128, 35, 1)', color: 'white' }}>ADD TO CARD</a>
+
+
                                           </div>
                                     )
                               })
                         }
-                  </div> */}
+                  </div>
 
 
-                  <div className="product">
+
+
+
+                  {/* <div className="product">
                         <div class="card" style={{ width: "18rem" }}>
                               <img src={collection_new} class="card-img-top" alt="..." style={{ height: '300px' }} />
                               <div class="card-body" >
@@ -132,13 +161,13 @@ function Home() {
                                     <a href="#" class="btn btn-primary">ADD TO CARD</a>
                               </div>
                         </div>
-                  </div>
+                  </div> */}
                   <div className="card-product">
                         <div class="card mb-3" style={{ maxwidth: "540px", width: "700px" }} >
                               <div class="row g-0">
                                     <div class="col-md-4">
 
-                                          <img src={arevlop} className="card-img-top" alt="Card image" style={{ borderRadius: "120px 120px 0 0", height: "300px", width: "260px" }} />
+                                          <img src={bigstock} className="card-img-top" alt="Card image" style={{ borderRadius: "120px 120px 0 0", height: "300px", width: "260px" }} />
 
                                     </div>
                                     <div class="col-md-8">
@@ -154,7 +183,27 @@ function Home() {
                               </div>
                         </div>
                   </div>
-                  <div className="product" style={{ gap: "50px" }}>
+
+
+                  <div className="product">
+                        {
+                              products2.map((item) => {
+                                    return (
+                                          <div class="card" style={{ width: "18rem" }}>
+
+                                                <img src={item.image} className="card-img-top" alt={item.name} style={{ height: "300px" }} />
+                                                <h5 className="card-title" >{item.name}</h5>
+                                                <p class="card-text">{item.description}</p>
+                                                <h4>{item.price}</h4>
+                                                <a href="#" className="btn btn-primary" style={{ backgroundColor: 'rgba(209, 128, 35, 1)', color: 'white' }} >ADD TO CARD</a>
+
+
+                                          </div>
+                                    )
+                              })
+                        }
+                  </div>
+                  {/* <div className="product" style={{ gap: "50px" }}>
                         <div class="card" style={{ width: "18rem" }}>
                               <img src={phone} class="card-img-top" alt="..." style={{ height: '300px' }} />
                               <div class="card-body" >
@@ -187,7 +236,7 @@ function Home() {
                               </div>
                         </div>
 
-                  </div>
+                  </div> */}
                   <div className="card-product">
                         <div class="card mb-3" style={{ maxwidth: "540px", width: "700px" }} >
                               <div class="row g-0">
@@ -209,12 +258,36 @@ function Home() {
                               </div>
                         </div>
                   </div>
+
+
+
                   <div className="product">
+                        {
+                              products3.map((item) => {
+                                    return (
+                                          <div class="card" style={{ width: "18rem" }}>
+
+                                                <img src={item.image} className="card-img-top" alt={item.name} style={{ height: "300px" }} />
+                                                <h5 className="card-title" >{item.name}</h5>
+                                                <p class="card-text">{item.description}</p>
+                                                <h4>{item.price}</h4>
+                                                <a href="#" className="btn btn-primary" style={{ backgroundColor: 'rgba(209, 128, 35, 1)', color: 'white' }}>ADD TO CARD</a>
+
+
+                                          </div>
+                                    )
+                              })
+                        }
+                  </div>
+
+                  {/* <div className="product">
                         <div class="card" style={{ width: "18rem" }}>
-                              <img src={center} class="card-img-top" alt="..." style={{ height: '300px' }} />
+                              <img src={clock} class="card-img-top" alt="..." style={{ height: '300px' }} />
                               <div class="card-body" >
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <h5 class="card-title">clock</h5>
+                                    <p class="card-text">Titan Essence Classic Analog Wall Clock - White, Plastic, 30x30 Cm - stylish and functional.</p>
+                                    <h4> ₹ 995</h4>
+
                                     <a href="#" class="btn btn-primary">ADD TO CARD</a>
                               </div>
                         </div>
@@ -249,10 +322,9 @@ function Home() {
                                     <a href="#" class="btn btn-primary">ADD TO CARD</a>
                               </div>
                         </div>
-                  </div>
-                  <div className="blog">
-                        <h2>Blog</h2>
-                  </div>
+                  </div> */}
+
+
                   <Footer />
             </div>
 

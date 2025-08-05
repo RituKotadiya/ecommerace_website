@@ -46,19 +46,19 @@ function Footer() {
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; @ 2025 techamdavad.com</p>
+                <p>&copy; 2025 techamdavad.com</p>
                 <div class="social-icons" >
-                    <a href="#" aria-label="Facebook" style={{ color: 'black' }}>
-                        <FontAwesomeIcon icon={faSquareFacebook} />
+                    <a href="#" aria-label="Facebook" style={{ color: 'black'}}>
+                        <FontAwesomeIcon icon={faSquareFacebook}  size="2x"/>
                     </a>
                     <a href="#" aria-label="LinkedIn" style={{ color: 'black' }}>
-                        <FontAwesomeIcon icon={faLinkedin} />
+                        <FontAwesomeIcon icon={faLinkedin}  size="2x" />
                     </a>
                     <a href="#" aria-label="Twitter" style={{ color: 'black' }}>
-                        <FontAwesomeIcon icon={faSquareTwitter} />
+                        <FontAwesomeIcon icon={faSquareTwitter}  size="2x"/>
                     </a>
                     <a href="#" aria-label="Twitter" style={{ color: 'black' }}>
-                        <FontAwesomeIcon icon={faInstagramSquare} />
+                        <FontAwesomeIcon icon={faInstagramSquare}  size="2x"/>
                         </a>
                 </div>
             </div>

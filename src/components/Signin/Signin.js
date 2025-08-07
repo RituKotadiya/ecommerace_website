@@ -1,13 +1,19 @@
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 import "./Signin.scss"
 import React from 'react';
 import image from './signin.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 
 function Home() {
     return (
         <div >
+            <Header />
             <div className="main">
                 <div class="container" >
 
@@ -45,6 +51,7 @@ function Home() {
                 </div>
             </div>
 
+            <Footer />
         </div>
     )
 }

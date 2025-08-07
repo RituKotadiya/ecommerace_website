@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import "./header.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBox, faCalendarDays, faHouse, faRightToBracket, faSearch, faUser, faUserPlus, faCartShopping } from '@fortawesome/free-solid-svg-icons';
@@ -6,6 +7,18 @@ import RK from './RK.png';
 
 
 function Header() {
+     const navigate = useNavigate();
+    
+          const Signin = () => {
+                navigate('/Signin');
+    
+          }
+          const Signup = () => {
+                navigate('/Signup');
+          }
+          const Home = () => {
+                navigate('/');
+          }
     return (
         <div className="na">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -35,7 +48,7 @@ function Header() {
                         <li className="text-center">
                             <a href="#" className="nav-link text-secondary" >
                                 {/* <FontAwesomeIcon icon={faHouse} size="lg" className="mb-1" /> */}
-                                <div>Home</div>
+                                <div onClick={Home}>Home</div>
                             </a>
                         </li>
                         <li className="text-center">
@@ -85,8 +98,8 @@ function Header() {
                             <FontAwesomeIcon icon={faUserPlus} size="lg" />
                         </a> */}
 
-                        <button className="btn" style={{ fontSize: "22px" }}> Signin</button>
-                        <button className="btn" style={{ fontSize: "22px" }}>Signup</button>
+                        <button className="btn" style={{ fontSize: "22px" }} onClick={Signin}> Signin</button>
+                        <button className="btn" style={{ fontSize: "22px" }} onClick={Signup}>Signup</button>
 
                         <a href="#" className="ms-3" title="Cart">
                             <FontAwesomeIcon icon={faCartShopping} style={{ fontSize: "28px", color: "black" }} />

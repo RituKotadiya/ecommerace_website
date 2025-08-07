@@ -3,11 +3,14 @@ import React from 'react';
 import image from './signup.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faLock, faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons';
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 
 
 function Home() {
     return (
         <div >
+            <Header />
             <div className="main">
                 <div class="container" >
 
@@ -44,7 +47,7 @@ function Home() {
 
                             <div className="remember">
                                 <input type="checkbox" id="remember" />
-                                <label for="remember"> I agree all statements in Terms of service</label>
+                                <label for="remember">  I agree all statements in Terms of service</label>
                             </div>
 
                             <button className="btn-b" type="submit" >Register</button>
@@ -52,15 +55,16 @@ function Home() {
                         </form>
                     </div>
 
-                   
-                        <div className="image">
-                            <img src={image} alt="App Logo" />
-                        </div>
-                   
+
+                    <div className="image">
+                        <img src={image} alt="App Logo" />
+                    </div>
+
 
                 </div>
             </div>
 
+            <Footer />
         </div>
 
 

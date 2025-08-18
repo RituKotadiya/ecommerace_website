@@ -1,16 +1,125 @@
-.btn-add {
-    border-radius: 5px;
-    background-color: rgba(209, 125, 35, 0.7);
-    color: white;
-    border: none;
-}
+// .btn-add {
+//     border-radius: 5px;
+//     background-color: rgba(209, 125, 35, 0.7);
+//     color: white;
+//     border: none;
+// }
 
-.font {
-    // font-style: italic;
-    // font-size: x-large;
+// .font {
+//     // font-style: italic;
+//     // font-size: x-large;
 
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    color: #333;
-    padding-top: 100px;
+//     font-family: 'Poppins', sans-serif;
+//     font-size: 16px;
+//     color: #333;
+//     padding-top: 100px;
+// }
+
+
+.product-page {
+    display: flex;
+    padding: 200px;
+    font-family: sans-serif;
+
+    .left-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+
+        .thumbnail-list {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+
+            .thumbnail {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                cursor: pointer;
+                border: 2px solid transparent;
+
+                &.active {
+                    border-color: #ff007f;
+                }
+            }
+        }
+
+        .main-image img {
+            width: 300px;
+            height: 300px;
+            margin-top: 20px;
+        }
+    }
+
+    .right-column {
+        width: 60%;
+        padding-left: 40px;
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .rating,
+        .price,
+        .offer-box {
+            margin: 10px 0;
+        }
+
+        .offer-box {
+            background-color: #f6f6f6;
+            padding: 10px;
+            border-left: 3px solid #ff007f;
+        }
+
+        .shade-picker {
+            margin: 20px 0;
+
+            .shades {
+                display: flex;
+                gap: 10px;
+                margin-top: 10px;
+
+                .shade {
+                    width: 30px;
+                    height: 50px;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    border: 2px solid transparent;
+
+                    &.selected {
+                        border-color: #ff007f;
+                    }
+                }
+            }
+        }
+
+        .add-to-bag {
+            background: rgba(209, 125, 35, 0.7);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            margin-top: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .delivery-box {
+            margin-top: 20px;
+
+            input {
+                padding: 8px;
+                width: 200px;
+                margin-right: 10px;
+            }
+
+            button {
+                padding: 8px 12px;
+                background: rgba(209, 125, 35, 0.7);
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
 }

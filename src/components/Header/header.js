@@ -19,6 +19,12 @@ function Header() {
           const Home = () => {
                 navigate('/');
           }
+          const Product = () => {
+            navigate('/Product');
+          }
+          const Cart = () => {
+            navigate('/Cart');
+          }
     return (
         <div className="na">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -60,7 +66,7 @@ function Header() {
                         <li className="text-center">
                             <a href="#" className="nav-link text-secondary">
                                 {/* <FontAwesomeIcon icon={faBox} size="lg" className="mb-1" /> */}
-                                <div>Products</div>
+                                <div onClick={Product}>Products</div>
                             </a>
                         </li>
                         <li className="text-center">
@@ -102,7 +108,7 @@ function Header() {
                         <button className="btn" style={{ fontSize: "22px" }} onClick={Signup}>Signup</button>
 
                         <a href="#" className="ms-3" title="Cart">
-                            <FontAwesomeIcon icon={faCartShopping} style={{ fontSize: "28px", color: "black" }} />
+                            <FontAwesomeIcon icon={faCartShopping} style={{ fontSize: "28px", color: "black" }} onClick={Cart}/>
                         </a>
 
                     </div>

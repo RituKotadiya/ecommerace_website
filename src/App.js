@@ -6,8 +6,8 @@ import Home from './components/Home/Home';
 import Signin from './components/Signin/Signin';
 import Signup from './components/Signup/Signup';
 import Product from './components/Product/Product';
-
-
+import Cart from './components/Cart/Cart';
+import Processcart from './components/Processcart/Processcart';
 
 function App() {
   return (
@@ -19,10 +19,13 @@ function App() {
     //     <Route path="/Signin" element={<Signin />} />
     //     <Route path="/Signup" element={<Signup />} />
     //     <Route path="/" element={<Home />} />
+    //     <Route path="/Product" element={<Product />} />
+    //     <Route path="/Cart" element={<Cart />} />
+
     //   </Routes>
     // </BrowserRouter>
+    <Processcart />
 
-    <Product/>
 
   );
 }

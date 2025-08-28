@@ -108,7 +108,7 @@ function Home() {
       </table>
 
       <div className="cart-actions">
-        <button className="update-btn">Process Cart</button>
+        <button className="update-btn" >Process Cart</button>
         <button className="continue-btn">Continue Shopping</button>
       </div>
 

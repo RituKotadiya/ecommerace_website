@@ -4,19 +4,35 @@
     height: 60px;
     object-fit: cover;
     border-radius: 5px;
+
+
   }
 }
 
 table.cart-table {
   width: 100%;
-  th, td {
+
+  th,
+  td {
     text-align: center;
     vertical-align: middle;
   }
 }
+
 .cart-summary {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+
+}
+
+.btnn {
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 130px;
+  font-size: 18px;
+  background: rgba(209, 125, 35, 0.7);
+  color: white;
 }

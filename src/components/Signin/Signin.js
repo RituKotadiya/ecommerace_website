@@ -1,16 +1,45 @@
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import "./Signin.scss"
-import React from 'react';
 import image from './signin.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
-import { useState } from "react";
+import { faUser, faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { AuthContext } from '../AuthContext/AuthContext';
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 
-
 function Home() {
+    const navigate = useNavigate();
+
+    const { signIn } = useContext(AuthContext);
+    const [user, setUser] = useState("");
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // let check = signIn(email, password);
+        // if (check) {
+        //     navigate('/');
+        // } else {
+        //     navigate('/Signin');
+        // }
+    };
+
+    const login = () => {
+        if ( email && password) { 
+             signIn( email, password);
+            console.log("Form Submitted Successfully");
+           navigate('/');
+            // setFormData({ user: "", email: "", password: "" }); // Reset form
+        } else {
+            // setErrors(validationErrors);
+            console.log("signUp Not  Successfull !")
+            navigate('/Signin');
+        }
+    }
     return (
         <div >
             <Header />
@@ -23,20 +52,28 @@ function Home() {
 
                     <div className="main-box">
 
-                        <form>
+                        <form onSubmit={handleSubmit}>
 
                             <h1>Sing In</h1>
 
+                            {/* <div className="input-group">
+                                <i className="fas fa-user"></i>
+                                <FontAwesomeIcon icon={faEnvelope} />
+                                <input type="text" placeholder="  User" onChange={(e) => setUser(e.target.value)} required />
+                            </div> */}
+
+
                             <div className="input-group">
                                 <i className="fas fa-user"></i>
-                                <FontAwesomeIcon icon={faUser} />
-                                <input type="text" placeholder="  User" required />
+                                <FontAwesomeIcon icon={faEnvelope} />
+                                <input type="text" placeholder="  Your Email" onChange={(e) => setEmail(e.target.value)} required />
                             </div>
+
 
                             <div className="input-group">
                                 <i className="fas fa-lock"></i>
                                 <FontAwesomeIcon icon={faLock} />
-                                <input type="password" placeholder="  Password" required />
+                                <input type="password" placeholder="  Password" onChange={(e) => setPassword(e.target.value)} required />
                             </div>
 
                             <div className="remember">
@@ -44,7 +81,7 @@ function Home() {
                                 <label for="remember">Remember me</label>
                             </div>
 
-                            <button className="btn-b" type="submit" >Log In</button>
+                            <button className="btn-b" type="submit" onClick={login}>Log In</button>
 
                         </form>
                     </div>

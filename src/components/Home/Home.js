@@ -1,7 +1,7 @@
-import React from 'react';
-import { useNavigate } from "react-router-dom";
+import React, { useContext } from 'react';       // ✅ Only this is needed
+import { useNavigate } from 'react-router-dom';
 
-import "./Home.scss"
+import "./Home.scss";
 import image from './sale.jpg';
 import collection from './marketing.jpg';
 import perfume from './perfume.webp';
@@ -24,12 +24,21 @@ import womaa from './womaa.jpg';
 import clock from './clock.jpg';
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-
-
+import { AuthContext } from '../AuthContext/AuthContext';
 
 
 function Home() {
-     
+
+
+      const navigate = useNavigate();
+      const { addToCart } = useContext(AuthContext);
+      const handleAddToCart = (item) => {
+            // addToCart(products, products1, products2, products3);
+            addToCart(item);
+            console.log("Addedd To card " + JSON.stringify(item))
+
+      };
+
       const products = [
             { id: 1, image: Makeup, name: "Beauty", description: "Description for product 1" },
             { id: 2, image: perfume, name: "Perfume", description: "Description for product 2" },
@@ -63,6 +72,11 @@ function Home() {
       ];
 
 
+      // const handleAddToCart = (item) => {
+      //       addToCart(item);
+      //       navigate('/Cart');
+      // };
+
 
 
       return (
@@ -70,7 +84,7 @@ function Home() {
                   <Header />
 
                   <div className="container-fluid image-container">
-                        <img src={image} alt="bag-ground" style={{ width: "100%" }}  className='bag-img'/>
+                        <img src={image} alt="bag-ground" style={{ width: "100%" }} className='bag-img' />
                         <h1 className="overlay-text">Your One Stop <br />Shop for Exerything</h1>
                         <p className="overlay-txt">Find everything you need in one place - great deals, top quality, and endless convenience. Shop anytime, anywhere. Instant deals!</p>
 
@@ -110,9 +124,9 @@ function Home() {
                                                 <h5 className="card-title" >{item.name}</h5>
                                                 <p class="card-text">{item.description}</p>
                                                 <h4>{item.price}</h4>
-                                                <a href="#" className="btn" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }}>ADD TO CARD</a>
+                                                {/* <a href="#" className="btn" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }}>ADD TO CARD</a> */}
 
-
+                                                <button className="btn" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }} onClick={() => handleAddToCart(item)}>ADD TO CARD</button>
                                           </div>
                                     )
                               })
@@ -180,8 +194,8 @@ function Home() {
                                                 <h2 className="card-body-title">Shop Everything!</h2>
 
                                           </div>
-                                          <a href="#" class="btn btn-primary" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }}>Shop Now</a>
-
+                                          {/* <a href="#" class="btn btn-primary" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }}>Shop Now</a> */}
+                                          <button class="btn btn-primary" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }}>Shop Now</button>
                                     </div>
                               </div>
                         </div>
@@ -198,8 +212,8 @@ function Home() {
                                                 <h5 className="card-title" >{item.name}</h5>
                                                 <p class="card-text">{item.description}</p>
                                                 <h4>{item.price}</h4>
-                                                <a href="#" className="btn btn-primary" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }}>ADD TO CARD</a>
-
+                                                {/* <a href="#" className="btn btn-primary" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }}>ADD TO CARD</a> */}
+                                                <button className="btn btn-primary" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }}>ADD TO CARD</button>
 
                                           </div>
                                     )
@@ -255,8 +269,8 @@ function Home() {
                                                 <h2 className="card-body-title">Shop Everything!</h2>
 
                                           </div>
-                                          <a href="#" class="btn btn-primary" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }} >Shop Now</a>
-
+                                          {/* <a href="#" class="btn btn-primary" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }} >Shop Now</a> */}
+                                          <button class="btn btn-primary" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }}>Shop Now</button>
                                     </div>
                               </div>
                         </div>
@@ -274,8 +288,8 @@ function Home() {
                                                 <h5 className="card-title" >{item.name}</h5>
                                                 <p class="card-text">{item.description}</p>
                                                 <h4>{item.price}</h4>
-                                                <a href="#" className="btn btn-primary" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }}>ADD TO CARD</a>
-
+                                                {/* <a href="#" className="btn btn-primary" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }}>ADD TO CARD</a> */}
+                                                <button className="btn btn-primary" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }}>ADD TO CARD</button>
 
                                           </div>
                                     )
@@ -334,5 +348,6 @@ function Home() {
 
       )
 }
+
 
 export default Home;

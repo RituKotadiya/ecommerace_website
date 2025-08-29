@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+
 import "./Cart.scss";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
+import { AuthContext } from '../AuthContext/AuthContext';
+import { useContext } from 'react';
 
 // ✅ Declare the cart data outside the component
 const initialCart = [
@@ -35,85 +37,86 @@ const initialCart = [
 ];
 
 function Home() {
-  const [cartItems, setCartItems] = useState(initialCart);
-  const [promoCode, setPromoCode] = useState("");
-  const [discount, setDiscount] = useState(25);
 
-  const handleQuantityChange = (id, delta) => {
-    setCartItems((prev) =>
-      prev.map((item) =>
-        item.id === id
-          ? { ...item, quantity: Math.max(0, item.quantity + delta) }
-          : item
-      )
-    );
-  };
+const { cartItems, handleRemoveItem, updateQuantity, removeFromCart} = useContext(AuthContext);
 
-  const handleRemoveItem = (id) => {
-    setCartItems((prev) => prev.filter((item) => item.id !== id));
-  };
+  const total = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
-  const total = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
+    // const [cartItems, setCartItems] = useState(initialCart);
+    // const [promoCode, setPromoCode] = useState("");
+    // const [discount, setDiscount] = useState(25);
 
-  return (
-    <div>
-          <Header />
-    
-    <div className="cart-container">
-      <table className="cart-table">
-        <thead>
-          <tr>
-            <th>PRODUCT</th>
-            <th>PRICE</th>
-            <th>QUANTITY</th>
-            <th>TOTAL</th>
-            <th>DELETE</th>
-            <th />
-          </tr>
-        </thead>
-        <tbody>
-          {cartItems.map((item) => (
-            <tr key={item.id}>
-              <td>
-                <div className="product-info">
-                  <img src={item.image} alt={item.name} />
-                  <div>
-                    <p>{item.name}</p>
-                    <p>
-                      Size: {item.size} | Color: {item.color}
-                    </p>
-                  </div>
-                </div>
-              </td>
-              <td>₹{item.price.toFixed(2)}</td>
-              <td>
-                <button onClick={() => handleQuantityChange(item.id, -1)}>
-                  -
-                </button>
-                <span>{item.quantity}</span>
-                <button onClick={() => handleQuantityChange(item.id, 1)}>
-                  +
-                </button>
-              </td>
-              <td>₹{(item.price * item.quantity).toFixed(2)}</td>
-              <td>
-                <button onClick={() => handleRemoveItem(item.id)}>🗑️</button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    // const handleQuantityChange = (id, delta) => {
+    //   setCartItems((prev) =>
+    //     prev.map((item) =>
+    //       item.id === id
+    //         ? { ...item, quantity: Math.max(0, item.quantity + delta) }
+    //         : item
+    //     )
+    //   );
+    // };
 
-      <div className="cart-actions">
-        <button className="update-btn" >Process Cart</button>
-        <button className="continue-btn">Continue Shopping</button>
-      </div>
+    // const handleRemoveItem = (id) => {
+    //   setCartItems((prev) => prev.filter((item) => item.id !== id));
+    // };
 
-      <div className="cart-summary">
-        {/* <div className="promo-section">
+
+    return (
+      <div>
+        <Header />
+
+        <div className="cart-container">
+          <table className="cart-table">
+            <thead>
+              <tr>
+                <th>PRODUCT</th>
+                <th>PRICE</th>
+                <th>QUANTITY</th>
+                <th>TOTAL</th>
+                <th>DELETE</th>
+                <th />
+              </tr>
+            </thead>
+            <tbody>
+              {cartItems.map((item) => (
+                <tr key={item.id}>
+                  <td>
+                    <div className="product-info">
+                      <img src={item.image} alt={item.name} />
+                      <div>
+                        <p>{item.name}</p>
+                        <p>
+                          Size: {item.size} | Color: {item.color}
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>{item.price}</td>
+                  <td>
+                    <button onClick={() => handleRemoveItem(item.id, -1)}>
+                      -
+                    </button>
+                    <span>{item.quantity}</span>
+                    <button  onClick={() => updateQuantity(item.id, 1)}>
+                      +
+                    </button>
+                  </td>
+                  <td>₹{(item.price * item.quantity).toFixed(2)}</td>
+                  <td>
+                    <button onClick={() => removeFromCart(item.id)}>🗑️</button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          <div className="cart-actions">
+            <button className="update-btn" >Process Cart</button>
+            <button className="continue-btn">Continue Shopping</button>
+          </div>
+
+          <div className="cart-summary">
+            {/* <div className="promo-section">
           <h3>Discount / Promo Code</h3>
           <p>
             Don’t have any code yet?{" "}
@@ -128,7 +131,7 @@ function Home() {
           <button>Apply</button>
         </div> */}
 
-        {/* <div className="summary-section">
+            {/* <div className="summary-section">
           <p>
             <strong>Address:</strong>
             <br />
@@ -139,11 +142,11 @@ function Home() {
           </p>
           <h3>Total: ₹{(total - discount).toFixed(2)}</h3>
         </div> */}
+          </div>
+        </div>
+        <Footer />
       </div>
-    </div>
-      <Footer />
-    </div>
-  );
-}
+    );
+  }
 
-export default Home;
+  export default Home;

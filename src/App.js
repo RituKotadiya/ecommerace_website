@@ -12,7 +12,6 @@ import Processcart from './components/Processcart/Processcart';
 import Header from './components/Header/Header';
 import { AuthProvider } from './components/AuthContext/AuthContext';
 
-
 function App() {
 
   return (

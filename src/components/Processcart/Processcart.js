@@ -5,6 +5,8 @@ import "./Processcart.scss";
 
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
+import { useContext} from 'react';
+import { AuthContext } from '../AuthContext/AuthContext';
 
 
 const initialCart = [
@@ -39,34 +41,37 @@ const initialCart = [
 
 function Home() {
 
-  const [cartItems, setCartItems] = useState(initialCart);
+    const { cartItems} = useContext(AuthContext);
+  
+  // const [cartItems, setCartItems] = useState(initialCart);
   const [promoCode, setPromoCode] = useState("");
   const [discount, setDiscount] = useState(25);
 
-  const handleQuantityChange = (id, delta) => {
-    setCartItems((prev) =>
-      prev.map((item) =>
-        item.id === id
-          ? { ...item, quantity: Math.max(0, item.quantity + delta) }
-          : item
-      )
-    );
-  };
+  // const handleQuantityChange = (id, delta) => {
+  //   setCartItems((prev) =>
+  //     prev.map((item) =>
+  //       item.id === id
+  //         ? { ...item, quantity: Math.max(0, item.quantity + delta) }
+  //         : item
+  //     )
+  //   );
+  // };
 
-  const handleRemoveItem = (id) => {
-    setCartItems((prev) => prev.filter((item) => item.id !== id));
-  };
+  // const handleRemoveItem = (id) => {
+  //   setCartItems((prev) => prev.filter((item) => item.id !== id));
+  // };
 
-  const total = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
+const total = cartItems.reduce(
+  (sum, item) => sum + item.price * item.quantity,
+  0
+);
+
   return (
     <div>
 
       <Header />
 
-      <div className="container mt-4">
+      <div className="container mt-4" style={{ paddingTop: "200px", paddingBottom: "100px" }} >
         <div className="row">
           {/* Left Block - Form */}
           <div className="col-md-4">
@@ -150,13 +155,18 @@ function Home() {
                           </div>
                         </div>
                       </td>
-                      <td>₹{item.price.toFixed(2)}</td>
+                      <td>{item.price}</td>
+
                       <td>
                         {/* <button onClick={() => handleQuantityChange(item.id, -1)}>-</button> */}
                         <span className="mx-2">{item.quantity}</span>
                         {/* <button onClick={() => handleQuantityChange(item.id, 1)}>+</button> */}
                       </td>
-                      <td>₹{(item.price * item.quantity).toFixed(2)}</td>
+                      <td>   ₹{
+                      (
+                        Number(item.price.replace(/[^0-9.]/g, "")) * Number(item.quantity)
+                      ).toFixed(2)
+                    }</td>
                     </tr>
                   ))}
                 </tbody>

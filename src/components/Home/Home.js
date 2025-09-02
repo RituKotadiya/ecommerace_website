@@ -35,10 +35,12 @@ function Home() {
       const handleAddToCart = (item) => {
             // addToCart(products, products1, products2, products3);
             addToCart(item);
+      
             console.log("Addedd To card " + JSON.stringify(item))
 
       };
 
+      
       const products = [
             { id: 1, image: Makeup, name: "Beauty", description: "Description for product 1" },
             { id: 2, image: perfume, name: "Perfume", description: "Description for product 2" },
@@ -213,7 +215,7 @@ function Home() {
                                                 <p class="card-text">{item.description}</p>
                                                 <h4>{item.price}</h4>
                                                 {/* <a href="#" className="btn btn-primary" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }}>ADD TO CARD</a> */}
-                                                <button className="btn btn-primary" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }}>ADD TO CARD</button>
+                                                <button className="btn btn-primary" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }} onClick={() => handleAddToCart(item)}>ADD TO CARD</button>
 
                                           </div>
                                     )
@@ -289,7 +291,7 @@ function Home() {
                                                 <p class="card-text">{item.description}</p>
                                                 <h4>{item.price}</h4>
                                                 {/* <a href="#" className="btn btn-primary" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }}>ADD TO CARD</a> */}
-                                                <button className="btn btn-primary" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }}>ADD TO CARD</button>
+                                                <button className="btn btn-primary" style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white' }} onClick={() => handleAddToCart(item)}>ADD TO CARD</button>
 
                                           </div>
                                     )

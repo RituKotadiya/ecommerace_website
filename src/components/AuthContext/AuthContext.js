@@ -11,16 +11,35 @@ export function AuthProvider({ children }) {
 
 
   const addToCart = (product) => {
-    setCartItems((prevItems) => [
-      ...prevItems,
-      { ...product, quantity: 1 } // 👈 default quantity 1
-    ]);
+
+ 
+
+    setCartItems((prevItems) => {
+      const existingItem = prevItems.find((item) => item.id === product.id);
+
+      if (existingItem) {
+        // If the product is already in the cart, increase its quantity
+        return prevItems.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 0 }
+            : item
+        );
+      } else {
+        // Otherwise, add the new product to the cart
+        return [...prevItems, { ...product, quantity: 1 }];
+      }
+
+    });
+
+
+
+
 
 
   };
-  const handleRemoveItem = (id) => {
-    setCartItems((prev) => prev.filter((item) => item.id !== id));
-  };
+  // const handleRemoveItem = (id) => {
+  //   setCartItems((prev) => prev.filter((item) => item.id !== id));
+  // };
 
   const updateQuantity = (id, amount) => {
     setCartItems((prev) => prev.map((item) =>
@@ -31,9 +50,10 @@ export function AuthProvider({ children }) {
     );
   };
 
+
   const removeFromCart = (id) => {
-  setCartItems((prev) => prev.filter((item) => item.id !== id));
-};
+    setCartItems((prev) => prev.filter((item) => item.id !== id));
+  };
 
 
   const signIn = (email, password) => {
@@ -61,7 +81,7 @@ export function AuthProvider({ children }) {
 
 
   return (
-    <AuthContext.Provider value={{ user, isLogin, signIn, signUp, signOut, cartItems, addToCart, handleRemoveItem, updateQuantity, removeFromCart }}>
+    <AuthContext.Provider value={{ user, isLogin, signIn, signUp, signOut, cartItems, addToCart, updateQuantity, removeFromCart }}>
       {children}
     </AuthContext.Provider>
 

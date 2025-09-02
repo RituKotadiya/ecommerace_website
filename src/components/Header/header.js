@@ -7,9 +7,10 @@ import RK from './RK.png';
 import { useContext } from "react";
 import { AuthContext } from '../AuthContext/AuthContext';
 
+
 function Header() {
     const navigate = useNavigate();
-    const { user, signOut, isLogin } = useContext(AuthContext);
+    const { user, signOut, isLogin , cartItems} = useContext(AuthContext);
 
 
 
@@ -117,8 +118,8 @@ function Header() {
                          
  
 
-                            <a href="#" className="ms-3" title="Cart">
-                                <FontAwesomeIcon icon={faCartShopping} style={{ fontSize: "28px", color: "black" }} onClick={Cart} />
+                            <a href="#" className="ms-3" title="Cart" >
+                                <FontAwesomeIcon icon={faCartShopping} style={{ fontSize: "28px", color: "black" }} onClick={Cart}  /><span style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white', borderRadius: "35px",paddingLeft: "5px", paddingRight:"5px"}}>{cartItems.length}</span>
                             </a>
 
                         </div>

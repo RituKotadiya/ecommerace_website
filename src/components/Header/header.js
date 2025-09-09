@@ -10,7 +10,7 @@ import { AuthContext } from '../AuthContext/AuthContext';
 
 function Header() {
     const navigate = useNavigate();
-    const { user, signOut, isLogin , cartItems} = useContext(AuthContext);
+    const { user, signOut, isLogin, cartItems } = useContext(AuthContext);
 
 
 
@@ -108,18 +108,18 @@ function Header() {
                             <FontAwesomeIcon icon={faUserPlus} size="lg" />
                         </a> */}
 
-                        {
-                            isLogin ? <button className="btn" style={{ fontSize: "22px" }} onClick={signOut}>Log Out</button> : <>
-                               <button className="btn" style={{ fontSize: "22px" }} onClick={Signin}> Signin</button>
-                            <button className="btn" style={{ fontSize: "22px" }} onClick={Signup}>Signup</button>
-                            </>
-                        }
+                            {
+                                isLogin ? <button className="btn" style={{ fontSize: "22px" }} onClick={signOut}>Log Out</button> : <>
+                                    <button className="btn" style={{ fontSize: "22px" }} onClick={Signin}>Signin</button>
+                                    <button className="btn" style={{ fontSize: "22px" }} onClick={Signup}>Signup</button>
+                                </>
+                            }
 
-                         
- 
+
+
 
                             <a href="#" className="ms-3" title="Cart" >
-                                <FontAwesomeIcon icon={faCartShopping} style={{ fontSize: "28px", color: "black" }} onClick={Cart}  /><span style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white', borderRadius: "35px",paddingLeft: "5px", paddingRight:"5px"}}>{cartItems.length}</span>
+                                <FontAwesomeIcon icon={faCartShopping} style={{ fontSize: "28px", color: "black" }} onClick={Cart} /><span style={{ backgroundColor: 'rgba(209, 125, 35, 0.7)', color: 'white', borderRadius: "35px", paddingLeft: "5px", paddingRight: "5px" }}>{cartItems.length}</span>
                             </a>
 
                         </div>

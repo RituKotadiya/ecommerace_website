@@ -130,7 +130,7 @@ function Home() {
 
         <div className="cart-actions">
           <button className="update-btn" onClick={() => navigate("/Processcart")}>Place Order</button>
-          <button className="continue-btn" >Continue Shopping</button>
+          <button className="continue-btn" onClick={() => navigate("/")}>Continue Shopping</button>
         </div>
 
         <div className="cart-summary">

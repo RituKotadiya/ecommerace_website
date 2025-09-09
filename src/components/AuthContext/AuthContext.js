@@ -12,8 +12,6 @@ export function AuthProvider({ children }) {
 
   const addToCart = (product) => {
 
- 
-
     setCartItems((prevItems) => {
       const existingItem = prevItems.find((item) => item.id === product.id);
 
@@ -31,12 +29,8 @@ export function AuthProvider({ children }) {
 
     });
 
-
-
-
-
-
   };
+  
   // const handleRemoveItem = (id) => {
   //   setCartItems((prev) => prev.filter((item) => item.id !== id));
   // };

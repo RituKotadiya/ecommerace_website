@@ -50,26 +50,26 @@ function Home() {
       ];
 
       const products1 = [
-            { id: 1, image: collection_new, name: "Soft Jacket", description: "FLEXIMAA Women's Cotton Full Zipper Sweatshirt Hoodies with Kangaroo Pocket", price: "₹ 699" },
-            { id: 2, image: myntra, name: "Shoes", description: "Vendoz Women and Girls Latest Collection Stylish White Casual Shoes Sneakers", price: "₹ 1,189" },
-            { id: 3, image: perfumePhoto, name: "Golden Serum", description: "Studd Muffyn | 24K Gold Face Serum | Hydrationg and moisturizing", price: "₹ 919" },
-            { id: 4, image: hand_bag, name: "Luxury Handbag", description: "Luxury Handbag for Women | Ladies purse | Stylish Shoulder Bag |  A blend of fashion ", price: "₹ 4,249" },
+            { id: 6, image: collection_new, name: "Soft Jacket", description: "FLEXIMAA Women's Cotton Full Zipper Sweatshirt Hoodies with Kangaroo Pocket", price: "₹ 699" },
+            { id: 7, image: myntra, name: "Shoes", description: "Vendoz Women and Girls Latest Collection Stylish White Casual Shoes Sneakers", price: "₹ 1,189" },
+            { id: 8, image: perfumePhoto, name: "Golden Serum", description: "Studd Muffyn | 24K Gold Face Serum | Hydrationg and moisturizing", price: "₹ 919" },
+            { id: 9, image: hand_bag, name: "Luxury Handbag", description: "Luxury Handbag for Women | Ladies purse | Stylish Shoulder Bag |  A blend of fashion ", price: "₹ 4,249" },
 
       ];
 
       const products2 = [
-            { id: 1, image: phone, name: "Smartphone", description: "Apple iPhone 15 (256 GB) - Black | Round dial Smartwatch with BT Calling, 1.39 Display, IP68, (Jet Black)", price: "₹ 75,800" },
-            { id: 2, image: sofa, name: "Luxury Chair", description: " Modern Comfy Velvet Upholstered Barrel Chairs, Luxury Single Sofa Armchair for Living Room, and | Office", price: "₹ 11,99" },
-            { id: 3, image: fashion, name: "Urban Fashion", description: "URBAN MONKEY UMSB Lightweight Coach Jacket – Navy Blue, Quick‑Dry Polyester, Unisex Streetwear", price: "₹ 3,399" },
+            { id: 10, image: phone, name: "Smartphone", description: "Apple iPhone 15 (256 GB) - Black | Round dial Smartwatch with BT Calling, 1.39 Display, IP68, (Jet Black)", price: "₹ 75,800" },
+            { id: 11, image: sofa, name: "Luxury Chair", description: " Modern Comfy Velvet Upholstered Barrel Chairs, Luxury Single Sofa Armchair for Living Room, and | Office", price: "₹ 11,99" },
+            { id: 12, image: fashion, name: "Urban Fashion", description: "URBAN MONKEY UMSB Lightweight Coach Jacket – Navy Blue, Quick‑Dry Polyester, Unisex Streetwear", price: "₹ 3,399" },
 
       ];
 
 
       const products3 = [
-            { id: 1, image: clock, name: "clock", description: "Titan Essence Classic Analog Wall Clock - White, Plastic, 30x30 Cm - stylish and functional.", price: " ₹ 995" },
-            { id: 2, image: Women, name: "Fashion Dress", description: "Alvami Women's Printed Kurta Set offers a stylish kurta, pant, and dupatta for a complete ethnic look.", price: "₹₹ 11,99" },
-            { id: 3, image: beauty, name: "Cold Processed Stem Cell Serum", description: "COSMEDIX Cell ID smooths skin and refines pores.", price: "₹ 17,107" },
-            { id: 4, image: womaa, name: "Jacket Shirt", description: " CHKOKKO Tweed Women Winter Shacket Stylish Standard Length Coat Plaid Jacket Shirt ", price: "₹ 999" },
+            { id: 13, image: clock, name: "clock", description: "Titan Essence Classic Analog Wall Clock - White, Plastic, 30x30 Cm - stylish and functional.", price: " ₹ 995" },
+            { id: 14, image: Women, name: "Fashion Dress", description: "Alvami Women's Printed Kurta Set offers a stylish kurta, pant, and dupatta for a complete ethnic look.", price: "₹₹ 11,99" },
+            { id: 15, image: beauty, name: "Cold Processed Stem Cell Serum", description: "COSMEDIX Cell ID smooths skin and refines pores.", price: "₹ 17,107" },
+            { id: 16, image: womaa, name: "Jacket Shirt", description: " CHKOKKO Tweed Women Winter Shacket Stylish Standard Length Coat Plaid Jacket Shirt ", price: "₹ 999" },
 
       ];
 

@@ -11,6 +11,8 @@ import Cart from './components/Cart/Cart';
 import Processcart from './components/Processcart/Processcart';
 import Header from './components/Header/Header';
 import { AuthProvider } from './components/AuthContext/AuthContext';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
 
